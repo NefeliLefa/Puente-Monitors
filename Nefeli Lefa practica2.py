@@ -100,36 +100,36 @@ class Monitor():
 
 
 
-def delay(d=3):
+def delay(d):
     time.sleep(random.random()/d)
 
 def human(monitor):
     
-    delay()
+    delay(5)
     print(f"human {current_process().name} wants to pass. Status: {monitor}")
     monitor.want_walk()
     print(f"human {current_process().name} walking.       Status: {monitor}")
-    delay()
+    delay(5)
     monitor.stop_walking()
     print(f"human {current_process().name} has passed.    Status: {monitor}")
 
 def car1(monitor):
     
-    delay()
+    delay(0.5)
     print(f"car1 {current_process().name} wants to pass. Status: {monitor}")
     monitor.want_drive1()
     print(f"car1 {current_process().name} passing.       Status: {monitor}")
-    delay()
+    delay(0.5)
     print(f"car1 {current_process().name} has passed.    Status: {monitor}")
     monitor.stop_driving1()
 
 def car2(monitor):
    
-    delay()
+    delay(0.5)
     print(f"car2 {current_process().name} wants to pass. Status: {monitor}")
     monitor.want_drive2()
     print(f"car2 {current_process().name} passing.       Status: {monitor}")
-    delay()
+    delay(0.5)
     print(f"car2 {current_process().name} has passed.    Status: {monitor}")
     monitor.stop_driving2()
 
